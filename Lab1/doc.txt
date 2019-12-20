@@ -1,0 +1,19 @@
+Aisha Iftikhar
+CORE Interpreter Project
+
+Description:
+This CORE interpreter uses recursive descent to generate the parse tree for the program and execute. There are four main files: Main, Scanner, Parser, and Tokenizer. The main class connects the main components of the interpreter, the scanner, parser and tokenizer. It is used to run the collective program. In general, the main class:
+1. reads and parses the input program
+2. invoke pretty print on the parse tree
+3. reads input values for execution and uses them in the executor to interpret the input program
+
+Initially, the tokenizer opens the input file and generates the token stream. Then the parse tree is generated in Parser.java using recursive descent parsing, as discussed in class. The Parser.java file contains classes for all nodes, such as DECL, STMT, STMT_SEQ, etc. These classes all contain individual parse, print, and execute functions. The parser uses methods in Scanner.java, such as match, currentToken, nextToken, etc., to retrieve and advance the token stream. The scanner maps input from the tokenizer to tokens for the parser, and is the only class that interfaces with the tokenizer. 
+
+Testing:
+The program passed all the weak test cases provided by the professor. It also passed sample test cases posted by other students. Further test cases were developed and used to test the program by myself. The only known bug remaining is odd spacing when printing the while loop. Instead of printing the condition on the same line as the while keyword, it is printed on a new line. For example, with test case 1:
+while
+0<X begin    input XY;
+However, this does not affect execution. 
+
+Resources:
+My resources included the slide set, other students, the professor, and Piazza. 
